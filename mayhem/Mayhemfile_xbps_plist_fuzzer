@@ -1,0 +1,8 @@
+project: xbps
+target: xbps_plist_fuzzer
+testsuite:
+  - file:///mayhem/mayhem/testsuite/xbps_plist_fuzzer
+cmds:
+  - cmd: /mayhem/xbps_plist_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/xbps_plist_fuzzer.dict

@@ -1,0 +1,41 @@
+# AFL/libFuzzer dictionary for xbps' portableproplib XML plist parser
+# (xbps_dictionary_internalize). Tokens are the XML prologue, the plist
+# DOCTYPE, and every element tag the internalizer dispatches on
+# (plist/dict/key/array/string/integer/data/true/false), plus the comment
+# delimiters and a few attributes the parser skips/recognizes.
+
+# XML prologue + DOCTYPE
+xml_decl="<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+doctype="<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">"
+
+# plist root + version attribute
+plist_open="<plist version=\"1.0\">"
+plist_close="</plist>"
+attr_version="version=\"1.0\""
+
+# container tags
+dict_open="<dict>"
+dict_close="</dict>"
+array_open="<array>"
+array_close="</array>"
+array_empty="<array/>"
+
+# value tags
+key_open="<key>"
+key_close="</key>"
+string_open="<string>"
+string_close="</string>"
+string_empty="<string/>"
+integer_open="<integer>"
+integer_close="</integer>"
+data_open="<data>"
+data_close="</data>"
+true="<true/>"
+false="<false/>"
+
+# misc parser tokens
+comment_open="<!--"
+comment_close="-->"
+amp_entity="&amp;"
+lt_entity="&lt;"
+gt_entity="&gt;"
