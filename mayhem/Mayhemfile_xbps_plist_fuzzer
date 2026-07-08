@@ -1,0 +1,9 @@
+project: xbps
+target: xbps_plist_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/xbps_plist_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/xbps_plist_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/xbps_plist_fuzzer/xbps_plist_fuzzer.dict

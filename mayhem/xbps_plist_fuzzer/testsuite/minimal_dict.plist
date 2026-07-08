@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pkgver</key>
+	<string>hello-2.10_1</string>
+	<key>installed_size</key>
+	<integer>123456</integer>
+	<key>automatic-install</key>
+	<true/>
+	<key>run_depends</key>
+	<array>
+		<string>libc-2.36_1</string>
+	</array>
+	<key>signature</key>
+	<data>QUJDRA==</data>
+</dict>
+</plist>
